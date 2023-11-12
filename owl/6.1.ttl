@@ -1,0 +1,30 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix : <http://semweb.edu.vn/example/pizza#> .
+
+:Vegetable rdfs:subClassOf :PizzaTopping .
+
+:PizzaTopping owl:disjointWith :Pizza .
+
+:aubergine rdf:type :Vegetable .
+
+:hasTopping a owl:ObjectProperty;
+    rdfs:domain :Pizza;
+    rdfs:range :PizzaTopping .
+
+[owl:intersectionOf (:NoMeatPizza :NoFishPizza)] rdfs:subClassOf :VegPizza .
+
+:hasTopping rdfs:subPropertyOf :hasIngredient .
+
+
+
+:veggie_mania a :NoMeatPizza, :NoFishPizza .
+
+:meat_lover a :NoFishPizza .
+
+:seafood_delight a :NoMeatPizza .
+
+:mushroom a :Vegetable .
+
+:seafood_delight :hasTopping :tomato .

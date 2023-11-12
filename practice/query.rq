@@ -1,0 +1,7 @@
+PREFIX ex: <http://example.org/>
+
+SELECT ?player
+WHERE {
+  ?player a ex:Player .
+  ?player ex:wonMatch ?match .
+}

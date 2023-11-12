@@ -1,0 +1,8 @@
+@prefix ex: <http://example.org/> .
+
+ex:PlayerA a ex:Player .
+ex:TeamB a ex:Team .
+ex:MatchC a ex:Match .
+
+ex:PlayerA ex:playsFor ex:TeamB .
+ex:TeamB ex:wonMatch ex:MatchC .

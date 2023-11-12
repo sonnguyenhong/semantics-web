@@ -1,0 +1,1 @@
+[rule1: (?p ex:playsFor ?t) (?t ex:wonMatch ?m) -> (?p ex:wonMatch ?m)]

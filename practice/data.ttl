@@ -1,0 +1,29 @@
+@prefix ex: <http://example.com/football#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:JohnDoe a ex:FootballPlayer ;
+    ex:hasName "John Doe" ;
+    ex:hasPosition "Forward" ;
+    ex:hasBirthDate "1990-05-12" ;
+    ex:hasHeight 185 ;
+    ex:hasWeight 80 ;
+    ex:hasClub ex:ManchesterUnited .
+
+ex:JaneSmith a ex:FootballPlayer ;
+    ex:hasName "Jane Smith" ;
+    ex:hasPosition "Defender" ;
+    ex:hasBirthDate "1995-08-20" ;
+    ex:hasHeight 170 ;
+    ex:hasWeight 65 ;
+    ex:hasClub ex:ChelseaFC .
+
+ex:ManchesterUnited a ex:FootballClub ;
+    ex:hasName "Manchester United" .
+
+ex:ChelseaFC a ex:FootballClub ;
+    ex:hasName "Chelsea FC" .
+
+
+[ rdfs:subClassOf rdfs:Resource ] .
+ex:FootballPlayer rdfs:subClassOf ex:Person .
